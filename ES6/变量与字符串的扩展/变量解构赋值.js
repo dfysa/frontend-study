@@ -1,23 +1,23 @@
-// var foods={
-//     best: "小龙虾",
-//     good:"火锅",
-//     normal:"快餐",
-//     bad:"方便面"
-// }
+var foods={
+    best: "小龙虾",
+    good:"火锅",
+    normal:"快餐",
+    bad:"方便面"
+}
 
 // 获取foods中的best和bad
-// var best =foods.best
-// var bad = foods.bad;
+var best =foods.best
+var bad = foods.bad;
 
-//解构复制
-// var{best,bad}=foods
-// console.log(best)
-// console.log(bad)
+//解构赋值
+var{best,bad}=foods
+console.log(best)
+console.log(bad)
 
-// var{best:best1,bad:bad1,hello}=foods
-// console.log(best1);
-// console.log(bad);
-// console.log(hello);
+var{best:best1,bad:bad1,hello}=foods
+console.log(best1);
+console.log(bad);
+console.log(hello);
 
 const address = {
   city: {
