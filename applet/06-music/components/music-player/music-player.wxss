@@ -1,0 +1,21 @@
+/* components/music-player/music-player.wxss */
+.music-player {
+	padding: 40rpx;
+	text-align: center;
+ }
+ .cover-image {
+	width: 200rpx;
+	height: 200rpx;
+	border-radius: 10rpx;
+	margin-bottom: 20rpx;
+ }
+ .music-info {
+	margin-bottom: 20rpx;
+	font-size: 28rpx;
+ }
+ button {
+	margin: 10rpx;
+	padding: 20rpx 40rpx;
+	font-size: 28rpx;
+	background-color: #99CCF3;
+ }

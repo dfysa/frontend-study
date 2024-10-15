@@ -1,0 +1,13 @@
+<view class="favorite-list">
+ <block wx:for="{{favoritePets}}" wx:key="id">
+ <view class="favorite-item">
+ <image class="pet-image" src="{{item.img}}" />
+ <view class="pet-info">
+ <text class="pet-name">{{item.name}} ({{item.type}})</text>
+ <text class="pet-breed">品种: {{item.breed}}</text>
+ <text class="pet-age">年龄: {{item.age}} 岁</text>
+ </view>
+ </view>
+ </block>
+ <button bindtap="goToApply">申请领养</button>
+</view>

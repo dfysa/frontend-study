@@ -1,0 +1,17 @@
+{
+  "usingComponents": {
+    "custom-checkbox": "/components/custom-checkbox/custom-checkbox",
+    "custom01": "/components/custom01/custom01",
+    "custom02": "/components/custom02/custom02",
+    "custom03": "/components/custom03/custom03",
+    "custom04": "/components/custom04/custom04",
+    "custom05": "/components/custom05/custom05",
+    "custom06": "/components/custom06/custom06",
+    "custom07": "/components/custom07/custom07",
+    "custom08": "/components/custom08/custom08"
+  },
+  "navigationBarTitleText": "自定义组件",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#00AF92",
+  "backgroundTextStyle": "light"
+}

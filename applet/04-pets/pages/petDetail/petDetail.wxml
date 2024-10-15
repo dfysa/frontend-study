@@ -1,0 +1,12 @@
+<!--pages/petDetail/petDetail.wxml-->
+<view class="pet-detail">
+ <image class="pet-image" src="{{pet.img}}" />
+ <view class="pet-info">
+ <text class="pet-name">{{pet.name}} ({{pet.type}})</text>
+ <text class="pet-breed">品种: {{pet.breed}}</text>
+ <text class="pet-age">年龄: {{pet.age}} 岁</text>
+ <text class="pet-description">{{pet.description}}</text>
+ </view>
+ <button bindtap="addToFavorites">加⼊收藏夹</button>
+ <button bindtap="goToFavorites">查看收藏夹</button>
+</view>

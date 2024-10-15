@@ -1,0 +1,12 @@
+<!--pages/product/detail/detail.wxml-->
+<view class="container">
+  <view wx:if="{{productDetail}}">
+    <view>商品名称: {{productDetail.name}}</view>
+    <view>价格: ¥{{productDetail.price}}</view>
+    <view>描述: {{productDetail.description}}</view>
+  </view>
+
+  <view wx:else>
+    <text>无法加载商品详情</text>
+  </view>
+</view>

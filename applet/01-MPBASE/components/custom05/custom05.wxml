@@ -1,0 +1,5 @@
+<!--components/custom05/custom05.wxml-->
+<view>
+  姓名：{{name}}，年龄：{{age}}
+</view>
+<button type="primary" plain bindtap="sendData">传递数据</button>

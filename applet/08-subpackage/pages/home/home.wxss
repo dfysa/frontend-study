@@ -1,0 +1,17 @@
+/* pages/home/home.wxss */
+page {
+  text-align: center;
+  margin-top: 100rpx;
+}
+
+/* 通用按钮样式 */
+button {
+  background-color: #DB673B;
+  color: #fff;
+  padding: 8rpx 16rpx;
+  border-radius: 10rpx;
+}
+
+navigator {
+  margin: 20rpx 0;
+}

@@ -1,0 +1,27 @@
+/* pages/petDetail/petDetail.wxss */
+/* 宠物详情⻚⾯样式 */
+.pet-detail {
+	padding: 40rpx;
+	background-color: #FFFAF0; /* 暖⻩⾊背景 */
+ }
+ .pet-image {
+	width: 100%;
+	border-radius: 30rpx;
+ }
+ .pet-info {
+	margin-top: 40rpx;
+ }
+ .pet-name {
+	font-size: 48rpx;
+	font-weight: bold;
+	color: #5D4037;
+ }
+ .pet-breed, .pet-age, .pet-description {
+	font-size: 32rpx;
+	color: #5D4037;
+	margin-top: 20rpx;
+ }
+ button {
+	margin-top: 40rpx;
+ }
+ 

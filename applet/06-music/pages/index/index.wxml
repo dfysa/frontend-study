@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+ <!-- ⾃定义组件 music-list，传递 musicList 数据，并绑定 onPlay 事件到 onPlayMu
+sic 函数 -->
+ <music-list musicList="{{musicList}}" bind:onPlay="onPlayMusic"></music-list>
+
+ <!-- ⾃定义组件 music-player，传递当前播放的⾳乐信息 currentMusic -->
+ <music-player currentMusic="{{currentMusic}}" bind:myevent="switchMusic" class="music-player"></music-player>
+</view>
+
+<!-- <view>{{ num }}</view> -->
+<!-- 需要在自定义组件标签上通过 bind 方法绑定自定义事件，同时绑定事件处理函数 -->
+<!-- <music-player  >
+
+</music-player> -->
+
+<import src="/components/music-player/music-player" />

@@ -1,0 +1,23 @@
+<!--components/music-player/music-player.wxml-->
+<view class="music-player">
+ <!-- 显示当前⾳乐的封⾯图⽚，使⽤ aspectFill 保持图⽚的宽⾼⽐ -->
+ <image class="cover-image" src="{{currentMusic.cover}}" mode="aspectFill"></image>
+
+ <view class="music-info">
+ <!-- 显示当前⾳乐的名称和艺术家 -->
+ <text>{{currentMusic.name}} - {{currentMusic.artist}}</text>
+ </view>
+
+ <!-- 播放/暂停按钮，点击时调⽤ togglePlay ⽅法，根据 isPlaying 的状态显示“播
+放”或“暂停”⽂本 -->
+<!-- 上一首按钮，点击时调⽤ previousMusic ⽅法 -->
+<button bindtap="previousMusic">上一首</button>
+
+<!-- 下一首按钮，点击时调⽤ nextMusic ⽅法 -->
+<button bindtap="nextMusic">下一首</button>
+
+ <button bindtap="togglePlay">{{isPlaying ? '暂停' : '播放'}}</button>
+
+ <!-- 停⽌按钮，点击时调⽤ stopMusic ⽅法，停⽌⾳乐播放 -->
+ <button bindtap="stopMusic">停⽌</button>
+</view>

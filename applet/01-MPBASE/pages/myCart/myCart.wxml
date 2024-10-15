@@ -1,0 +1,27 @@
+<!--pages/myCart/myCart.wxml-->
+<view class="container">
+  <!-- 商品展示区 -->
+  <view class="product-list">
+    <!-- 添加商品的按钮，使用 data-product 属性传递自定义数据 -->
+    <button bindtap="addToCart" data-product="苹果" type="warn">添加苹果</button>
+    <button bindtap="addToCart" data-product="香蕉" type="warn">添加香蕉</button>
+    <button bindtap="addToCart" data-product="橙子" type="warn">添加橙子</button>
+  </view>
+
+  <!-- 购物车展示，点击购物车按钮可以显示或隐藏购物车内容 -->
+  <view class="cart" bindtap="toggleCart">
+    <text>购物车商品： {{cart.length}}</text>
+    <!-- 判断是否显示购物车内容 -->
+    <view wx:if="{{showCart}}" class="cart-items">
+      <!-- 循环展示购物车中的商品 -->
+      <block wx:for="{{cart}}" wx:key="index">
+        <!-- 每个商品项，点击执行删除函数 -->
+        <view class="cart-item" bindtap="deleteItem" data-index="{{index}}" >
+          <text>{{item}}</text>
+          <!-- 删除按钮 -->
+          <button class="delete-btn">删除</button>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

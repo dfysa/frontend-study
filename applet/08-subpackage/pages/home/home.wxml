@@ -1,0 +1,17 @@
+<!--pages/home/home.wxml-->
+ 
+<view class="container">
+  <text>{{message}}</text>
+  
+  <navigator url="/pages/product/list/list">
+    <button>进入商品管理</button>
+  </navigator>
+
+  <navigator url="/pages/user/user/user">
+    <button>进入用户管理</button>
+  </navigator>
+
+  <navigator url="/pages/order/list/list">
+    <button>进入订单管理</button>
+  </navigator>
+</view>

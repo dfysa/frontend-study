@@ -1,0 +1,29 @@
+/* pages/myVant/myVant.wxss */
+.custom-class {
+  border: 10rpx solid lightseagreen !important;
+}
+ 
+/* .van-button--default {
+	background: var(--button-default-background-color,rgb(230,137,188))!important;
+	border: var(--button-border-width,1px) solid var(--button-default-border-color,#ebedf0);
+	color: var(--button-default-color,#323233);
+} */
+
+.btn-class {
+	background-color: purple !important ;
+	color:white !important;
+}
+
+
+
+
+
+/* 使用一个局部变量时用 var() 函数一个合法的属性值
+.container {
+  background-color: var(--main-bg-color) !important;
+}
+
+.btn-class {
+  background-color: var(--main-btn-color) !important;
+  color: #fff !important;
+} */

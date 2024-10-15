@@ -1,0 +1,34 @@
+<!--pages/myVant/myVant.wxml-->
+
+<!-- <van-button type="default" custom-class="btn-class">默认按钮</van-button>
+<van-button type="primary">主要按钮</van-button>
+<van-button type="info">信息按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+<van-button type="danger">危险按钮</van-button> -->
+
+<view class="container">
+  <van-button type="default" custom-class="btn-class">默认按钮</van-button>
+  <van-button type="primary">主要按钮</van-button>
+  <van-button type="info">信息按钮</van-button>
+  <van-button type="warning">警告按钮</van-button>
+  <van-button type="danger">危险按钮</van-button>
+</view>
+
+
+<!-- <van-image width="100" height="100" src="https://my-bucket-621.oss-cn-beijing.aliyuncs.com/%E4%BC%9D%E6%89%BF%E3%81%AE%E4%B8%98.jpg" />
+<van-image 
+  width="100" 
+  height="100" 
+  round 
+  src="/assets/dog3.png" 
+	use-loading-slot
+  use-error-slot
+  custom-class="custom-class"
+  bind:click="imageHandler" 
+> -->
+
+<!-- slot: loading -->
+<!-- <van-loading slot="loading" type="spinner" size="20" vertical /> -->
+<!-- slot: error -->
+<!-- <text slot="error">加载失败</text>
+</van-image> -->

@@ -1,0 +1,104 @@
+<!--pages/cart/cart.wxml-->
+<!-- 如果需要展示数据，在 wxml 中需要使用双大括号写法将变量进行包裹 -->
+<view>{{ school }}</view>
+<view>{{ obj.name }}</view>
+
+<!-- 绑定属性值，如果需要动态绑定一个变量，属性值也需要使用双大括号进行包裹 -->
+<view id="{{ id }}">绑定属性值</view>
+
+<!-- 如果属性值是布尔值，也需要使用双大括号进行包裹 -->
+<checkbox checked="{{ isChecked }}" />是否选择
+  
+<!-- 算术运算 -->
+<view>{{ id + 1 }}</view>
+<view>{{ id - 1 }}</view>
+  
+<!-- 三元运算 -->
+<view>{{ id === 1 ? '等于' : '不等于' }}</view>
+  
+<!-- 逻辑判断 -->
+<view>{{ id === 1 }}</view>
+<!-- 在双大括号写法内部，只能写表达式，不能写语句，也不能调用 js 的方法，以下都是错误的 -->
+<!-- <view>{{ if (id === 1) {} }}</view> -->
+<!-- <view>{{ for (const i = 0; i <= 10; i++) {} }}</view> -->
+<!-- <view>{{ obj.name.toUpperCase() }}</view> -->
+
+<view>{{ num }}</view>
+<button bind:tap="updateNum">点击变化num</button>
+
+<text>{{ userInfo.name }},</text>
+<text>{{ userInfo.age}},</text>
+<text>{{ userInfo.gender }}</text>
+<button bind:tap="updateUserInfo">点击变化userInfo</button>
+
+<!-- <view>
+	{{ fruitList }}
+</view>
+<button bind:tap="concatList" type="warn">concatList</button> -->
+
+
+<!-- 单向绑定：数据能够影响页面，但是页面更新不会影响到数据 -->
+<!-- <input type="text" value="{{ school }}" /> -->
+
+<!-- 双向绑定：数据能够影响页面，页面更新也能够影响数据 -->
+<!-- 如果想实现简易双向绑定，需要再对应的属性之前添加 model: -->
+<!-- <input type="text" model:value="{{ school }}" style="border:1px solid #ddd;padding:5px;"/> -->
+
+<!-- 如果需要获取复选框的选中效果，需要给 checked 添加 model: -->
+<!-- <checkbox model:checked="{{ isChecked }}"/> 是否同意该协议 -->
+
+  <!-- 注意事项1：属性值只能是一个单一字段的绑定 -->
+<!-- <input type="text" model:value="school 属性：{{ school }}" /> -->
+
+  <!-- 注意事项2：属性值不能写数据路径，也就是不支持对象和数组 -->
+<!-- <input type="text" model:value="obj.name 属性：{{ obj.name }}" /> -->
+
+
+<!-- 如果需要进行列表渲染，需要使用 wx:for 属性 -->
+<!-- 属性值需要使用双大括号进行包裹 -->
+<!-- 每一项的变量名默认是 item -->
+<!-- 每一项下标（索引）的变量名默认是 index -->
+<!-- 如果渲染的是数组，item：数组的每一项，index：下标 -->
+<!-- <view wx:for="{{ numList }}">{{ item }}:{{ index }}</view> -->
+<!-- 如果渲染的是对象，item：对象属性的值，index：对象属性 -->
+<!-- <view wx:for="{{ obj }}">{{ item }}:{{ index }}</view> -->
+<!-- ------------------------ 关于 Key --------------------------------- -->
+<!-- wx:key 提升性能 -->
+<!-- wx:key 的属性值不需要使用双大括号进行包裹，直接写遍历的数组 中 item 的某个属性 -->
+<!-- wx:key 属性值有两种添加形式 -->
+<!-- 字符串，需要是遍历的数组 中 item 的某个属性，要求该属性是列表中唯一的字符串或者数字，不能进行动态改变 -->
+<!-- <view wx:for="{{ bookList }}" wx:key="id">{{ item.name }}:{{ item.price}}</view>
+<view wx:for="{{ bookList }}" wx:key="index">{{ item.name }}:{{item.price}}</view> -->
+<!-- 保留关键字 *this，*this 代表的是 item 本身，item 本身是唯一的字符串或者数字 -->
+<!-- <view wx:for="{{ numList }}" wx:key="*this">{{ item }}</view>
+
+<view wx:for="{{ animal }}" wx:for-index="i" wx:key="i">
+  <view>{{i}}:{{ item }}</view>
+</view> -->
+
+
+<!-- <block wx:for="{{ bookList }}" wx:key="id">
+  <view>
+    <span>{{ item.name }}</span>
+    <span>{{ item.price }}</span>
+  </view>
+</block> -->
+<!-- 
+	● wx:if ：当条件为 true 时将内容渲染出来，否则元素不会进行渲染，通过移除/新增节点的方式来实现；
+  ● hidden ：当条件为 true 时会将内容隐藏，否则元素会显示内容，通过 display 样式属性来实现的。 -->
+<!-- <view wx:if="{{condition}}"> True </view>
+<view wx:if="{{length > 5}}"> 1 </view>
+<view wx:elif="{{length > 2}}"> 2 </view>
+<view wx:else> 3 </view>
+
+<view hidden="{{condition}}"> True </view> -->
+
+<!-- 使用 wx:if、wx:elif、wx:else 属性组控制元素的隐藏和控制 -->
+<view wx:if="{{ num === 1 }}">num 等于 {{ num }}</view>
+<view wx:elif="{{ num === 2 }}">num 等于 {{ num }}</view>
+<view wx:else>大于 2</view>
+
+<view hidden="{{ num !== 1 && num !== 2 && num !== 3 && num < 3}}">
+  {{ num < 3 ? 'num 等于' + num : '大于 2' }}
+</view>
+<button type="primary" bindtap="updateNum">修改数据</button>

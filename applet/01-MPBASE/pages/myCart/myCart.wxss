@@ -1,0 +1,41 @@
+/* pages/myCart/myCart.wxss */
+/* pages/myCart/myCart.wxss *//* 页面容器的样式 */
+.container {
+  padding: 40rpx;
+}
+
+/* 商品按钮的样式 */
+.product-list button {
+  margin: 20rpx;
+}
+
+/* 购物车样式 */
+.cart {
+  margin-top: 40rpx;
+  background-color: #f8f8f8;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+/* 购物车中商品列表的样式 */
+.cart-items {
+  margin-top: 20rpx;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20rpx;
+}
+
+/* 单个商品项的样式 */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+
+/* 删除按钮的样式 */
+.delete-btn {
+  color: red;
+  border: none;
+  background-color: transparent;
+}

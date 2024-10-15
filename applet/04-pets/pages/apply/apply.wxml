@@ -1,0 +1,6 @@
+<view class="apply-form">
+ <input placeholder="您的姓名" bindinput="handleInput" data-field="name" />
+ <input placeholder="联系⽅式" bindinput="handleInput" data-field="contact"
+/>
+ <button bindtap="submitApplication">提交领养申请</button>
+</view>

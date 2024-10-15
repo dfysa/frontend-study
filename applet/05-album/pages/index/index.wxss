@@ -1,0 +1,42 @@
+.container {
+  padding: 40rpx; /* ⻚⾯整体的内边距 */
+ }
+ .diary-entry {
+  margin-bottom: 40rpx; /* ⽇记输⼊部分的底部外边距 */
+ }
+ .photo {
+  width: 100%; /* 图⽚宽度设置为100%以适应屏幕 */
+  height: 200rpx; /* 固定⾼度的图⽚区域 */
+  margin: 20rpx 0; /* 上下20rpx的外边距 */
+ }
+ textarea {
+  width: 100%; /* 输⼊框宽度100% */
+  height: 200rpx; /* 固定⾼度的输⼊框 */
+  margin-bottom: 20rpx; /* 输⼊框底部的外边距 */
+  border: 1rpx solid #ddd; /* 边框1rpx */
+  padding: 20rpx; /* 输⼊框内部的边距 */
+ }
+ button {
+  margin: 20rpx 0; /* 按钮上下外边距 */
+  background-color: #67AD5B;
+  color:white;
+ }
+ .diary-list {
+  margin-top: 40rpx; /* 照⽚⽇记列表顶部的外边距 */
+ }
+ .diary-item {
+  margin-bottom: 40rpx; /* 每个⽇记项的底部外边距 */
+ }
+ .diary-photo {
+  width: 100%; /* 照⽚的宽度100% */
+  height: 200rpx; /* 照⽚的固定⾼度 */
+  margin-bottom: 20rpx; /* 底部外边距 */
+ }
+ .description {
+  font-size: 32rpx; /* 描述的⽂字⼤⼩ */
+  margin-bottom: 10rpx; /* 描述的底部外边距 */
+}
+.date {
+ font-size: 24rpx; /* ⽇期⽂字的⼤⼩ */
+ color: #888; /* ⽇期⽂字颜⾊设为灰⾊ */
+}

@@ -1,0 +1,13 @@
+<!--pages/user/user/user.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <text>用户名: {{username}}</text>
+    <view wx:if="{{userInfo}}">
+      <view>年龄: {{userInfo.age}}</view>
+      <view>邮箱: {{userInfo.email}}</view>
+    </view>
+  </view>
+  <view wx:if="{{userInfo}}">
+    <button bindtap="logout" type="primary">退出登录</button>
+  </view>
+</view>

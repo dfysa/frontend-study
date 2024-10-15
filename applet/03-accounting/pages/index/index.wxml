@@ -1,0 +1,51 @@
+<view class="container">
+ <!-- 显示当前总余额 -->
+ <view class="balance-container">
+ <text class="balance-title">当前余额：</text> <!-- 总余额的标题 -->
+
+<text class="balance-amount" :style="{ color: totalBalance >= 0 ? 'black' : 'red' }">{{totalBalance}}</text>
+
+ 
+ </view>
+ 
+ <!-- ⾦额输⼊框 -->
+ <input
+ placeholder="输⼊⾦额"
+ type="number"
+ bindinput="handleAmountInput"
+ value="{{inputAmount}}"
+ class="input-amount"
+ /> <!-- ⽤户输⼊⾦额，绑定输⼊事件 handleAmountInput -->
+ <!-- 备注输⼊框 -->
+ <input
+ placeholder="输⼊备注"
+ bindinput="handleNoteInput"
+ value="{{inputNote}}"
+ class="input-note"
+ /> <!-- ⽤户输⼊备注，绑定输⼊事件 handleNoteInput -->
+ <!-- 收⼊和⽀出按钮 -->
+ <view class="button-group">
+ <button bindtap="addIncome" class="income-button">收⼊</button>
+ <!-- 点击按钮触发 addIncome ⽅法，添加收⼊记录 -->
+ <button bindtap="addExpense" class="expense-button">⽀出</button>
+ <!-- 点击按钮触发 addExpense ⽅法，添加⽀出记录 -->
+ </view>
+ <!-- 交易记录列表 -->
+ <view class="record-list">
+ <!-- 遍历 records 数组，显示每⼀条记录 -->
+ <block wx:for="{{records}}" wx:key="index">
+ <view class="record-item">
+ <view>
+	<text class="record-type">{{item.type}}</text> <!-- 显示交易类型，收
+⼊/⽀出 -->
+ <text class="record-amount">{{item.amount}} 元</text> <!-- 显示交易
+⾦额 -->
+ <text class="record-note">{{item.note}}</text> <!-- 显示备注内容 -->
+ </view>
+
+ <button bindtap="removeRecord" data-index="{{index}}" class="delete-button">删除</button>
+<!-- 删除按钮，点击触发 removeRecord ⽅法，删除该记录 -->
+</view>
+ </block>
+ </view>
+</view>

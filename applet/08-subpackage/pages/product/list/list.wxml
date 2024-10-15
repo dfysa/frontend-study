@@ -1,0 +1,9 @@
+<!--pages/product/list/list.wxml-->
+<view class="container">
+  <block wx:for="{{products}}" wx:key="id">
+    <view class="product-item" data-id="{{item.id}}" bindtap="viewProductDetail">
+      <text>商品名称: {{item.name}}</text>
+      <text>价格: ¥{{item.price}}</text>
+    </view>
+  </block>
+</view>

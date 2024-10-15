@@ -1,0 +1,7 @@
+<!--components/custom04/custom04.wxml-->
+<view>{{ num }}</view>
+<view>{{ count }}</view>
+<view>{{ obj.name }}</view>
+<view>{{ arr[1] }}</view>
+<view>{{ label }}</view>
+<button type="warn" plain bindtap="updateData">更新数据</button>

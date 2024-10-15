@@ -1,0 +1,29 @@
+/* components/music-list/music-list.wxss */
+.music-list {
+	/* 设置⾳乐列表的内边距为 20rpx */
+	padding: 20rpx;
+ }
+ .music-item {
+	/* 使⽤ flex 布局，使⼦元素在⼀⾏内排列 */
+	display: flex;
+	/* 垂直居中对⻬⾳乐项的⼦元素 */
+	align-items: center;
+	/* 设置⾳乐项上下的内边距为 20rpx */
+	padding: 20rpx 0;
+	/* 设置⾳乐项底部的边框为 1rpx 的实线，颜⾊为浅灰⾊ */
+	border-bottom: 1rpx solid #ccc;
+ }
+ .cover-image {
+	/* 设置封⾯图⽚的宽度和⾼度为 100rpx */
+	width: 100rpx;
+	height: 100rpx;
+	/* 设置封⾯图⽚的圆⻆为 10rpx，使其有圆⻆效果 */
+	border-radius: 10rpx;
+	/* 设置封⾯图⽚右侧的外边距为 20rpx，与右边的内容保持距离 */
+	margin-right: 20rpx;
+ }
+ .music-info {
+	/* 设置 music-info 元素占据剩余空间，确保⽂本区域扩展 */
+	flex-grow: 1;
+ }
+ 

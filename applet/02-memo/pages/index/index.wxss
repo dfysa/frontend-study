@@ -1,0 +1,48 @@
+/* 整体布局样式，背景颜⾊浅灰，内边距设置 */
+.container {
+  padding: 20rpx;
+  background-color: #f4f5f7;
+  min-height: 100vh; /* 设置⻚⾯最⼩⾼度，保证背景⾊填满⻚⾯ */
+ }
+ /* 顶部区域，包含标题和新建按钮 */
+ .header {
+  display: flex; /* 设置为弹性布局 */
+  justify-content: space-between; /* 左右对⻬ */
+  align-items: center; /* 垂直居中对⻬ */
+  margin-bottom: 20rpx; /* 底部添加间距 */
+ }
+ /* ⻚⾯标题样式 */
+ .title {
+  font-size: 36rpx; /* 字体⼤⼩ */
+  font-weight: bold; /* 加粗 */
+  color: #333; /* 深灰⾊ */
+ }
+ /* 备忘录列表样式，顶部间距 */
+ .memo-list {
+  margin-top: 20rpx;
+ }
+ /* 单个备忘录项样式 */
+ .memo-item {
+  background-color: white; /* 背景⾊为⽩⾊ */
+  border-radius: 12rpx; /* 圆⻆ */
+  margin-bottom: 20rpx; /* 每个备忘录项之间的间距 */
+  padding: 20rpx; /* 内容内边距 */
+  box-shadow: 0rpx 4rpx 12rpx rgba(0, 0, 0, 0.05); /* 阴影效果 */
+  transition: background-color 0.3s; /* 背景⾊变化时的过渡动画 */
+ }
+ /* ⿏标悬停时背景⾊变化 */
+ .memo-item:hover {
+  background-color: #f7f7f7;
+ }
+ /* 备忘录标题样式 */
+ .memo-title {
+  font-size: 32rpx;
+ font-weight: bold;
+ color: #333; /* 深灰⾊ */
+ margin-bottom: 8rpx; /* 标题与内容之间的间距 */
+}
+/* 备忘录内容样式 */
+.memo-content {
+ font-size: 28rpx;
+ color: #666; /* 灰⾊⽂本 */
+}

@@ -1,0 +1,109 @@
+// 全局颜⾊、字体、尺⼨变量
+$background-color: #f4f5f7; // 背景颜⾊变量
+$balance-title-color: #333; // 余额标题的字体颜⾊
+$balance-amount-color: #4caf50; // 余额数字的颜⾊（绿⾊，表示余额）
+$border-color: #ddd; // 边框颜⾊（浅灰⾊）
+$input-padding: 20rpx; // 输⼊框的内边距
+$input-font-size: 28rpx; // 输⼊框的字体⼤⼩
+$button-padding: 20rpx; // 按钮的内边距
+$button-border-radius: 10rpx; // 按钮的圆⻆半径
+$font-color: #333; // 通⽤的字体颜⾊
+$button-font-size: 30rpx; // 按钮的字体⼤⼩
+$delete-bg-color: #f44336; // 删除按钮的背景颜⾊（红⾊）
+$delete-font-color: white; // 删除按钮的字体颜⾊
+// ⻚⾯主容器样式
+.container {
+ padding: 20rpx; // ⻚⾯边距
+ background-color: $background-color; // 设置全局的背景⾊
+ min-height: 100vh; // ⻚⾯最⼩⾼度设为视窗⾼度，保证背景⾊覆盖全屏
+}
+// 余额显示区域样式
+.balance-container {
+ text-align: center; // 余额显示区域居中
+ margin-bottom: 30rpx; // 设置与下⽅元素的间距
+ // 余额标题样式
+ .balance-title {
+ font-size: 32rpx; // 标题字体⼤⼩
+ color: $balance-title-color; // 标题颜⾊，深灰⾊
+ }
+ // 余额数额样式
+ .balance-amount {
+ font-size: 48rpx; // 数字的字体⼤⼩
+ font-weight: bold; // 粗体显示
+ color: $balance-amount-color; // 余额颜⾊，绿⾊
+ }
+}
+// ⾦额输⼊和备注输⼊框样式
+.input-amount,
+.input-note {
+ width: 100%; // 输⼊框宽度设为100%，占满容器
+ padding: $input-padding; // 使⽤全局变量，定义输⼊框内边距
+ margin-bottom: 20rpx; // 设置下⽅的外边距
+ border: 1px solid $border-color; // 边框颜⾊使⽤全局浅灰⾊变量
+ border-radius: 10rpx; // 圆⻆边框，弧度为10rpx
+ font-size: $input-font-size; // 字体⼤⼩使⽤全局变量
+}
+// 收⼊和⽀出按钮组的样式
+.button-group {
+ width: 100%;
+ display: flex; // ⽔平布局，按钮在⼀⾏内排列
+ justify-content: space-between; // 左右两侧对⻬，按钮间距⾃动调整
+ margin-bottom: 30rpx; // 与下⽅元素的外边距
+ // 收⼊按钮样式
+ .income-button {
+ background-color: #65b8df; // 蓝⾊背景，表示收⼊
+ color: white; // 按钮⽂字颜⾊为⽩⾊
+ padding: $button-padding; // 按钮内边距
+ border-radius: $button-border-radius; // 圆⻆半径
+ font-size: $button-font-size; // 按钮⽂字⼤⼩
+ width: 48%; // 按钮宽度设为⽗容器的48%，两个按钮占据整⾏
+ }
+ // ⽀出按钮样式
+ .expense-button {
+ background-color: #EA7A99; // 粉⾊背景，表示⽀出
+ color: white; // 按钮⽂字颜⾊为⽩⾊
+ padding: $button-padding; // 按钮内边距
+ border-radius: $button-border-radius; // 圆⻆半径
+ font-size: $button-font-size; // 按钮⽂字⼤⼩
+ width: 48%; // 宽度与收⼊按钮相同，占据⽗容器的48%
+ }
+}
+// 交易记录列表样式
+.record-list {
+ margin-top: 30rpx; // 列表顶部外边距，留出与上⽅元素的空间
+}
+// 单个记录项的样式
+.record-item {
+ 
+ 
+ display: flex; // ⽔平布局
+ justify-content: space-between; // 左右对⻬
+ align-items: center; // 垂直居中对⻬
+ padding: 20rpx; // 内边距，确保内容不贴边
+ border-bottom: 1px solid $border-color; // 底部边框，区分各个记录项
+ font-size: 30rpx; // 字体⼤⼩设为30rpx
+ // 交易类型样式（例如“收⼊”或“⽀出”）
+ .record-type {
+  font-weight: bold; // 加粗显示
+  color: $font-color; // 字体颜⾊使⽤全局深灰⾊
+  }
+  // 交易⾦额样式
+  .record-amount {
+  color: black; // 交易⾦额显示为⿊⾊
+  }
+  // 备注内容的样式
+  .record-note {
+  color: #666; // 灰⾊显示备注
+  margin-right: 20rpx; // 右侧留出20rpx的外边距
+  }
+
+  // 删除按钮样式
+  .delete-button {
+  background-color: $delete-bg-color; // 删除按钮的背景⾊，红⾊
+  color: $delete-font-color; // 删除按钮的⽂字颜⾊，⽩⾊
+  border-radius: $button-border-radius; // 圆⻆按钮
+  padding: 10rpx; // 内边距设为10rpx
+  font-size: 28rpx; // 字体⼤⼩稍⼩，28rpx
+ 
+  }
+ }

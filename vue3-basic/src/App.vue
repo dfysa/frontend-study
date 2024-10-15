@@ -63,7 +63,7 @@
     <!-- <DataFetcher></DataFetcher> -->
     <!-- <CardParent></CardParent> -->
      <LoginForm></LoginForm>
-    <GoodList></GoodList>
+    <!-- <GoodList></GoodList> -->
     <!-- <Explore></Explore> -->
           <!-- <myblog></myblog> -->
      <!-- <waitquestion></waitquestion> -->

@@ -1,0 +1,46 @@
+/* pages/customNav/customNav.wxss */
+/* 导航栏样式 */
+.custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  z-index: 999;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 左边返回按钮区域 */
+.navbar-left {
+  width: 50px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* 中间标题区域 */
+.navbar-title {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* 右侧操作区域 (可以放置更多按钮) */
+.navbar-right {
+  width: 50px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

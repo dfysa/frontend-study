@@ -1,0 +1,34 @@
+/* 收藏夹⻚⾯样式 */
+.favorite-list {
+	padding: 40rpx;
+	background-color: #FFFAF0; /* 暖⻩⾊背景 */
+ }
+ .favorite-item {
+	background-color: #ffffff;
+	padding: 30rpx;
+	margin-bottom: 30rpx;
+	border-radius: 20rpx;
+	display: flex;
+	flex-direction: row;
+ }
+ .pet-image {
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 20rpx;
+	margin-right: 30rpx;
+ }
+ .pet-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+ }
+ .pet-name {
+	font-size: 36rpx;
+	font-weight: bold;
+	color: #5D4037;
+ }
+ .pet-breed, .pet-age {
+	font-size: 28rpx;
+	color: #5D4037;
+ }
+ 

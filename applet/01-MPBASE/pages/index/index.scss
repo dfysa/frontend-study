@@ -1,0 +1,148 @@
+swiper-item {
+  // 在 Sass 拓展语言中，& 符号表示父选择器的引用。它用于在嵌套的选择器中引用父选择器。
+  // 这段代码使用嵌套结构来生成与 swiper-item 相关的伪类选择器。
+  // &:first-child 表示 swiper-item 的第一个子元素，背景颜色设置为天蓝色
+  &:first-child {
+    background-color: skyblue;
+  }
+  
+  // &:nth-child(2) 表示 swiper-item 的第二个子元素，背景颜色设置为浅珊瑚色
+  &:nth-child(2) {
+    background-color: lightcoral;
+  }
+  
+  // &:last-child 表示 swiper-item 的最后一个子元素，背景颜色设置为浅海绿色
+  &:last-child {
+    background-color: lightseagreen;
+  }
+}
+
+
+/** index.wxss **/
+page {
+  height: 100vh;
+  background-color: #efefef !important;
+}
+
+swiper {
+  swiper-item {
+    image {
+      width: 100%;
+      height: 100%;
+    }
+    // 在 Sass 拓展语言中，& 符号表示父选择器的引用。它用于在嵌套的选择器中引用父选择器。
+    // 这段代码使用嵌套结构来生成与 swiper-item 相关的伪类选择器。
+    // &:first-child 表示 swiper-item 的第一个子元素，背景颜色设置为天蓝色
+    // &:first-child {
+    //   background-color: skyblue;
+    // }
+
+    // &:nth-child(2) 表示 swiper-item 的第二个子元素，背景颜色设置为浅珊瑚色
+    // &:nth-child(2) {
+    //   background-color: lightcoral;
+    // }
+    
+    // &:last-child 表示 swiper-item 的最后一个子元素，背景颜色设置为浅海绿色
+    // &:last-child {
+    //   background-color: lightseagreen;
+    // }
+  }
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16rpx 0rpx;
+  padding: 20rpx;
+  font-size: 24rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  .iconfont {
+    font-size: 32rpx;
+   }
+}
+
+// 商品导航区域
+.goods-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20rpx 16rpx;
+  border-radius: 10rpx;
+  view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    image {
+      width: 80rpx;
+      height: 80rpx;
+    }
+    text {
+      font-size: 24rpx;
+      margin-top: 12rpx;
+    }
+  }
+}
+
+// 商品导航区域
+.goods-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20rpx 16rpx;
+  border-radius: 10rpx;
+
+  view {
+   navigator {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+    image {
+      width: 80rpx;
+      height: 80rpx;
+    }
+
+    text {
+      font-size: 24rpx;
+      margin-top: 12rpx;
+    }
+  }
+}
+
+// 推荐商品区域
+.hot {
+  background-color: #fff;
+  padding: 16rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+
+  .scroll-x {
+    width: 100%;
+    white-space: nowrap;
+    view {
+      display: inline-block;
+      width: 320rpx;
+      height: 440rpx;
+      margin-right: 16rpx;
+      .goods-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text {
+          &:nth-of-type(1) {
+            font-weight: bold;
+          }
+        }
+      }
+      image {
+        width: 100%;
+        height: 320rpx;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

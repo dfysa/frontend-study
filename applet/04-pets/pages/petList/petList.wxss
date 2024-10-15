@@ -1,0 +1,37 @@
+/* pages/petList/petList.wxss */
+/* 宠物列表⻚⾯样式 */
+.pet-list {
+	padding: 40rpx;
+	background-color: #FFF8DC;
+ }
+ .pet-item {
+	background-color: #ffffff;
+	padding: 30rpx;
+	margin-bottom: 30rpx;
+	border-radius: 20rpx;
+	box-shadow: 0px 8rpx 20rpx rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: row;
+ }
+ .pet-image {
+	width: 400rpx;
+	height: 200rpx;
+	border-radius: 20rpx;
+	margin-right: 30rpx;
+ }
+ .pet-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+ }
+ .pet-name {
+	font-size: 40rpx;
+	font-weight: bold;
+	color: #5D4037;
+ }
+ .pet-breed, .pet-age, .pet-description {
+	color: #5D4037;
+	font-size: 28rpx;
+	margin-top: 8rpx;
+ }
+ 

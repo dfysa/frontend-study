@@ -1,0 +1,14 @@
+<!--pages/petList/petList.wxml-->
+<view class="pet-list">
+ <block wx:for="{{petList}}" wx:key="id">
+ <view class="pet-item" bindtap="onPetTap" data-id="{{item.id}}">
+ <image src="{{item.img}}" class="pet-image"/>
+ <view class="pet-info">
+ <text class="pet-name">{{item.name}} ({{item.type}})</text>
+ <text class="pet-breed">品种: {{item.breed}}</text>
+ <text class="pet-age">年龄: {{item.age}} 岁</text>
+ <text class="pet-description">{{item.description}}</text>
+ </view>
+ </view>
+ </block>
+</view>

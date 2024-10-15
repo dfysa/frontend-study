@@ -1,0 +1,36 @@
+{
+  "code": 200,
+  "message": "成功",
+  "data": [
+    {
+      "id": 1,
+      "createTime": "2024-09-30 14:29:49",
+      "updateTime": "2024-09-30 14:29:49",
+      "isDeleted": 0,
+      "title": "情人节",
+      "imageUrl": "http://39.98.123.211:8300/images/banner-1.png",
+      "linkUrl": "",
+      "sort": 1
+    },
+    {
+      "id": 2,
+      "createTime": "2024-09-30 14:29:49",
+      "updateTime": "2024-09-30 14:29:49",
+      "isDeleted": 0,
+      "title": "送温暖",
+      "imageUrl": "http://39.98.123.211:8300/images/banner-2.png",
+      "linkUrl": "",
+      "sort": 2
+    },
+    {
+      "id": 3,
+      "createTime": "2024-09-30 14:29:49",
+      "updateTime": "2024-09-30 14:29:49",
+      "isDeleted": 0,
+      "title": "生日礼物",
+      "imageUrl": "http://39.98.123.211:8300/images/banner-3.png",
+      "linkUrl": "",
+      "sort": 3
+    }
+  ]
+}

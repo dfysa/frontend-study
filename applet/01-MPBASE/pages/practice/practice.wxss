@@ -1,0 +1,24 @@
+page{position: relative;height: 100%;background-color: #F6F6F6}
+
+.rotateCtn{position: absolute;width: 70%;height: 70%;left: 15%;bottom: 20%;transform-style:preserve-3d;}
+.frame{position: absolute;height: 20%;width: 100%;background-color: #43a447;}
+.frame text{height: 100%;width: 100%;
+  color:white;
+border-radius: 8px;display: flex;justify-content: center;align-items: center;font-size: 24px;
+font-weight: bolder;
+color:white;
+}
+.front{animation:front 1s linear 1;backface-visibility: hidden;}
+.back{animation:back 1s linear 1;}
+
+.frame-back{position: absolute;height: 20%;width: 100%;background-color: red;}
+.frame-back text{height: 100%;width: 100%;border-radius: 8px;display: flex;justify-content: center;align-items: center;font-size: 24px;
+  font-weight: bolder;
+  color:white;
+  }
+ 
+
+@keyframes front{from{transform: rotateY(0deg);}  to{transform: rotateY(180deg);}}
+@keyframes back{from{transform: rotateY(-180deg);}  to{transform: rotateY(0deg);}}
+.z1{z-index:6}
+.z2{z-index:5}

@@ -1,0 +1,28 @@
+<view class="container">
+ <!-- 照⽚⽇记输⼊部分 -->
+ <view class="diary-entry">
+ <!-- 按钮：选择照⽚ -->
+ <button bindtap="choosePhoto">选择照⽚</button>
+ <!-- 图⽚显示，绑定当前选择的照⽚ -->
+ <image class="photo" src="{{currentPhoto}}" wx:if="{{currentPhoto}}" mode="aspectFit" />
+ <!-- 输⼊框：照⽚⽂字描述 -->
+ <textarea placeholder="请输⼊⽂字描述" bindinput="inputDescription" value="{{description}}"></textarea>
+ <!-- 按钮：保存⽇记 -->
+ <button bindtap="saveDiary">保存⽇记</button>
+ </view>
+ <!-- 照⽚⽇记列表 -->
+ <view class="diary-list">
+ <block wx:for="{{photoDiary}}" wx:key="index">
+ <view class="diary-item">
+ <!-- 照⽚，点击可以预览 -->
+ <image src="{{item.photo}}" class="diary-photo" bindtap="previewPhoto" data-src="{{item.photo}}" />
+ <!-- 照⽚的描述 -->
+ <view class="description">{{item.description}}</view>
+ <!-- 保存的⽇期和时间 -->
+ <view class="date">{{item.date}}</view>
+ </view>
+ </block>
+ </view>
+ <!-- 按钮：分享⽇记 -->
+ <button open-type="share">分享⽇记</button>
+</view>

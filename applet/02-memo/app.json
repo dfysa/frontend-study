@@ -1,0 +1,47 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/newMemo/newMemo",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#eee",
+    "navigationBarBackgroundColor": "#4594d4",
+    "navigationBarTitleText": "备忘录",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#4584d4",
+    "color": "#666",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "/assets/tabbar/index.png",
+        "selectedIconPath": "/assets/tabbar/index-active.png"
+      },
+      {
+        "text": "新建",
+        "pagePath": "pages/newMemo/newMemo",
+        "iconPath": "/assets/tabbar/newMemo.png",
+        "selectedIconPath": "/assets/tabbar/newMemo-active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/profile/profile",
+        "iconPath": "/assets/tabbar/profile.png",
+        "selectedIconPath": "/assets/tabbar/profile-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

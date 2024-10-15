@@ -1,0 +1,38 @@
+<!--pages/mpCapabilities/mpCapabilities.wxml-->
+<!-- 给 button 添加 open-type 属性，值为 chooseAvatar -->
+<!-- 绑定 bindchooseavatar 事件获取回调信息 -->
+<!-- <button open-type="chooseAvatar" bindchooseavatar="getAvatar">
+  按钮
+</button>
+
+<view class="avatar">
+<image src="{{avatarUrl}}" mode="aspectFill" />
+</view> -->
+
+
+<view class="container">
+  <button bindtap="getUserProfile">获取用户信息</button>
+  <view wx:if="{{userInfo}}">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text>昵称: {{userInfo.nickName}}</text>
+  </view>
+</view>
+
+<!-- <button open-type="share">转发</button> -->
+
+
+<!-- <button
+  type="primary"
+  plain
+  open-type="getPhoneNumber"
+  bindgetphonenumber="getphonenumber"
+>快速验证组件</button>
+
+<button
+  type="warn"
+  plain
+  open-type="getRealtimePhoneNumber"
+  bindgetrealtimephonenumber="getrealtimephonenumber"
+>实时验证组件</button>
+
+<button type="warn" plain open-type="contact">联系客服</button> -->

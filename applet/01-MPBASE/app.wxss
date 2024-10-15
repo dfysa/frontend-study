@@ -1,0 +1,31 @@
+@import "./static/fonts.wxss";
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* app.wxss */
+/* text {
+  color: lightseagreen;
+  font-size: 50rpx;
+} */
+
+/* .label {
+  color: lightseagreen;
+} */
+
+/* text {
+  color: lightseagreen;
+} */
+
+/* 声明全局的变量，可在项目中任意组件中使用 */
+page {
+  --main-bg-color: #7cd1cd;
+  --main-btn-color: #db72c1;
+}

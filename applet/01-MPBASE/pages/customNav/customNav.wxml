@@ -1,0 +1,11 @@
+<!--pages/customNav/customNav.wxml-->
+<view class="custom-navbar" style="height: {{navbarHeight}}px; padding-top: {{statusBarHeight}}px;">
+  <view class="navbar-left" bindtap="onBack">
+    <image src="/assets/back.png" class="back-icon"></image>
+  </view>
+  <view class="navbar-title">{{title}}</view>
+  <view class="navbar-right">
+    <!-- 可以放置更多操作 -->
+    <text>更多</text>
+  </view>
+</view>

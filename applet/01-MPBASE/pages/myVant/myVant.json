@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
+  "navigationBarTitleText": "vant 组件",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#00AF92",
+  "backgroundTextStyle": "light"
+}

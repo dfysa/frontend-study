@@ -1,0 +1,149 @@
+<!-- 轮播图区域 -->
+<!-- 轮播图区域 -->
+<view class="swiper">
+  <!-- swiper 组件实现轮播图区域的绘制 -->
+  <!-- swiper 组件，滑块视图容器 -->
+  <swiper
+    circular
+    autoplay
+    indicator-dots
+    interval="2000"
+    indicator-color="#efefef"
+    indicator-active-color="#ccc"
+  >
+    <!-- swiper 组件内部不能写其他组件或内容 -->
+    <!-- 在 swiper 组件内部只能写 swiper-item 组件 -->
+    <!-- swiper-item 组件只能放到 swiper 组件中，宽高自动设置为 100% -->
+    <swiper-item>
+ <!-- 在小程序中图片不能使用 img 标签，使用后不会生效 -->
+      <!-- <img src="../../assets/banner/banner-1.png" alt=""/> -->
+      <!-- 需要使用 images 组件 -->
+      <!-- image 组件不给 src 属性设置默认值，也占据宽和高 -->
+      <!-- image 默认具有宽度，宽是 320px 高度是 240px -->
+      <!-- mode 属性：用来设置图片的裁切模式、纵横比例、显示的位置 -->
+      <!-- show-menu-by-longpress 属性：长按转发给朋友、收藏、保存图片 -->
+      <image src="../../assets/banner/banner-1.png" mode="widthFix" show-menu-by-longpress />
+    </swiper-item>
+    <swiper-item>
+      <image src="../../assets/banner/banner-2.png" mode="aspectFill"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../assets/banner/banner-3.png" mode="aspectFill"/>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 公司相关信息 -->
+<view class="info">
+  <!-- text 是文本组件，类似于 span，是行内元素 -->
+  <!-- user-select：文本是否可选 -->
+  <!-- space：是否连续展示空格 -->
+  <!-- <text user-select space="ensp">同城        配送</text> -->
+  <text><text class="iconfont icon-tongchengpeisong"></text> 同城配送</text>
+  <text><text class="iconfont icon-hangyelongtou"></text> 行业龙头</text>
+  <text><text class="iconfont icon-shijian"></text> 半小时送达</text>
+  <text><text class="iconfont icon-haoping"></text> 100% 好评</text>
+</view>
+
+<!-- 商品导航区域 -->
+<!-- view：视图容器，作用类似于 div，是一个块级元素，独占一行 -->
+<view class="goods-nav">
+  <view>
+    <navigator url="/pages/list/list">
+    <!-- text：文本组件，类似于 span，是一个行内元素 -->
+    <image src="/assets/category/cate-1.png" alt=""/>
+    <text>爱礼精选</text>
+  </navigator>
+  </view>
+  <view>
+    <navigator url="/pages/list/list">
+    <image src="/assets/category/cate-2.png" alt=""/>
+    <text>鲜花玫瑰</text>
+  </navigator>
+  </view>
+  <view>
+    <navigator url="/pages/list/list">
+    <image src="/assets/category/cate-3.png" alt=""/>
+    <text>永生玫瑰</text>
+  </navigator>
+  </view>
+  <view>
+    <navigator url="/pages/list/list">
+    <image src="/assets/category/cate-4.png" alt=""/>
+    <text>玫瑰珠宝</text>
+  </navigator>
+  </view>
+  <view>
+    <navigator url="/pages/list/list">
+    <image src="/assets/category/cate-5.png" alt=""/>
+    <text>香水护体</text>
+  </navigator>
+  </view>
+</view>
+
+<!-- 商品推荐区域 -->
+ 
+<!-- 推荐商品 -->
+<view class="hot">
+  <scroll-view scroll-x class="scroll-x">
+    <view>
+      <view class="goods-item">
+        <image src="../../assets/floor/1.png" mode=""/>
+        <text>鲜花玫瑰</text>
+        <text>66</text>
+      </view>
+    </view>
+
+    <view>
+      <view class="goods-item">
+        <image src="../../assets/floor/2.png" mode=""/>
+        <text>鲜花玫瑰</text>
+        <text>77</text>
+      </view>
+    </view>
+
+    <view>
+      <view class="goods-item">
+        <image src="../../assets/floor/3.png" mode=""/>
+        <text>鲜花玫瑰</text>
+        <text>88</text>
+      </view>
+    </view>
+
+    <view>
+      <view class="goods-item">
+        <image src="../../assets/floor/4.png" mode=""/>
+        <text>鲜花玫瑰</text>
+        <text>99</text>
+      </view>
+    </view>
+
+    <view>
+      <view class="goods-item">
+        <image src="../../assets/floor/5.png" mode=""/>
+        <text>鲜花玫瑰</text>
+        <text>100</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<button type="primary" bindtap="handler" size="mini" plain bindtap="navigateTo">
+  navigateTo
+</button>
+<button type="primary" bindtap="handler" size="mini" plain bindtap="redirectTo">
+  redirectTo
+</button>
+<button type="warn" bindtap="handler" size="mini" plain bindtap="switchTab">
+  switchTab
+</button>
+<button type="warn" bindtap="handler" size="mini" plain bindtap="reLaunch">
+  reLaunch
+</button>
+
+<button type="primary" bindtap="login" plain>
+  login
+</button>
+
+<button type="primary" bindtap="handler" plain>
+  handler
+</button>

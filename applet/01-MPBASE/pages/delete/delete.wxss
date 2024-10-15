@@ -1,0 +1,38 @@
+/* pages/delete/delete.wxss */
+/* style */
+.list {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* 列表项样式 */
+.list-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 文本样式 */
+.list-item text {
+  font-size: 16px;
+  color: #333;
+}
+
+/* 删除按钮样式 */
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}

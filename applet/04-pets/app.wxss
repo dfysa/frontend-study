@@ -1,0 +1,19 @@
+/* 全局样式 */
+body {
+  background-color: #FFF8DC; /* 暖⻩⾊ */
+  font-family: "Arial", sans-serif;
+  color: #5D4037; /* 棕⾊字体 */
+ }
+ button {
+  background-color: #FFD700; /* 按钮暖⻩⾊ */
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+ }
+ input {
+  border: 1px solid #FFD700;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 10px 0;
+ }
+ 

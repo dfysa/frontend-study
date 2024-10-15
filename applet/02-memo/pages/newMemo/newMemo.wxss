@@ -1,0 +1,44 @@
+/* ⻚⾯背景和布局设置 */
+.container {
+	padding: 20rpx;
+	background-color: #f4f5f7;
+	min-height: 100vh;
+ }
+ /* 输⼊框组的外边距设置 */
+ .form-group {
+	margin-bottom: 20rpx;
+ }
+ /* 标题输⼊框样式 */
+ .input-title {
+	width: 100%; /* 宽度设置为100% */
+	padding: 20rpx; /* 内边距 */
+	font-size: 32rpx; /* 字体⼤⼩ */
+	border-radius: 12rpx; /* 圆⻆ */
+	background-color: white; /* 背景⾊为⽩⾊ */
+	border: 1px solid #e0e0e0; /* 边框颜⾊ */
+	box-shadow: 0rpx 4rpx 8rpx rgba(0, 0, 0, 0.05); /* 阴影效果 */
+ }
+ /* 内容输⼊框样式 */
+ .input-content {
+	width: 100%;
+	height: 300rpx; /* ⾼度设置 */
+	padding: 20rpx;
+	font-size: 28rpx;
+	border-radius: 12rpx;
+	background-color: white;
+	border: 1px solid #e0e0e0;
+	box-shadow: 0rpx 4rpx 8rpx rgba(0, 0, 0, 0.05);
+ }
+ /* 保存按钮样式 */
+ .save-button {
+	background-color: #1296db;
+	color: white;
+	padding: 16rpx 20rpx;
+	border-radius: 25rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+	width: 100%;
+	text-align: center; /* 按钮⽂字居中 */
+	margin-top: 20rpx; /* 上⽅间距 */
+	box-shadow: 0rpx 4rpx 12rpx rgba(0, 0, 0, 0.1); /* 按钮阴影 */
+ } 

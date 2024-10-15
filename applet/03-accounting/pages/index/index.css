@@ -1,0 +1,83 @@
+.container {
+  padding: 20rpx;
+  background-color: #f4f5f7;
+  min-height: 100vh;
+}
+
+.balance-container {
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.balance-container .balance-title {
+  font-size: 32rpx;
+  color: #333;
+}
+.balance-container .balance-amount {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.input-amount,
+.input-note {
+  width: 100%;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border: 1px solid #ddd;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.button-group .income-button {
+  background-color: #65b8df;
+  color: white;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  width: 48%;
+}
+.button-group .expense-button {
+  background-color: #EA7A99;
+  color: white;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  width: 48%;
+}
+
+.record-list {
+  margin-top: 30rpx;
+}
+
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1px solid #ddd;
+  font-size: 30rpx;
+}
+.record-item .record-type {
+  font-weight: bold;
+  color: #333;
+}
+.record-item .record-amount {
+  color: black;
+}
+.record-item .record-note {
+  color: #666;
+  margin-right: 20rpx;
+}
+.record-item .delete-button {
+  background-color: #f44336;
+  color: white;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+}/*# sourceMappingURL=index.css.map */

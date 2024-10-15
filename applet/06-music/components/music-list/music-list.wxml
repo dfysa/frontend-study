@@ -1,0 +1,15 @@
+<!--components/music-list/music-list.wxml-->
+<view class="music-list">
+ <!-- 遍历 musicList 数组并渲染每⼀项。通过 wx:key 使⽤每项的唯⼀ id 来提⾼渲染效率 -->
+ <block wx:for="{{musicList}}" wx:key="id">
+ <view class="music-item" bindtap="playMusic" data-id="{{item.id}}">
+ <!-- 显示每个⾳乐项的封⾯图⽚，使⽤ aspectFill 模式以保持图⽚的宽⾼⽐ -->
+ <image class="cover-image" src="{{item.cover}}" mode="aspectFill"></image>
+ <view class="music-info">
+ <!-- 显示歌曲名称和艺术家名称 -->
+ <text>{{item.name}} - {{item.artist}}</text>
+ </view>
+ </view>
+ </block>
+</view>
+

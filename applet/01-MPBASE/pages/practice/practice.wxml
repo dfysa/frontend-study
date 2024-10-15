@@ -1,0 +1,15 @@
+<!--pages/practice/practice.wxml-->
+<!-- <view class="container">
+  <canvas canvas-id="myCanvas" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></canvas>
+</view> -->
+
+<view class='rotateCtn' bindtap='rotateFn'>
+  <!--正面的框  -->
+  <view class='frame {{class1}}'>
+    <text>点击翻转</text>
+  </view>
+  <!--背面的框 -->
+  <view class='frame-back {{class2}}'>
+    <text>已翻转</text>
+  </view>
+</view>

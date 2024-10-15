@@ -1,0 +1,21 @@
+{
+  "pages": [
+ 
+    "pages/petList/petList",
+    "pages/petDetail/petDetail",
+    "pages/favorite/favorite",
+    "pages/apply/apply"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFD700",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "宠物领养",
+    "backgroundColor": "#FFFAF0",
+    "backgroundTextStyle": "light"
+   
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,8 @@
+<view class="container">
+ <!-- 个⼈设置标题 -->
+ <view class="setting-item">
+ <text class="setting-title">个⼈设置</text>
+ </view>
+ <!-- 清空所有备忘录按钮 -->
+ <button class="clear-button" bindtap="clearMemos">清空所有备忘录</button>
+</view>

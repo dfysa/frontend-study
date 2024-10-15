@@ -1,0 +1,52 @@
+<!--pages/myComponent/myComponent.wxml-->
+<!-- label 文本显示的内容，position 控制文本显示的位置 -->
+
+
+<!-- <custom-checkbox  /> -->
+ 
+ 
+<!-- <custom-checkbox label="我已阅读并同意 用户协议 和 隐私协议" position="right" />
+<view class="line"></view>
+<custom-checkbox label="匿名提交" position="left" /> -->
+
+<!-- <custom01>
+  <text slot="slot-top">我需要显示到顶部</text>
+  <!-- 默认情况下，自定义组件的子节点内容不会进行展示 -->
+  <!-- 如果想内容进行展示，需要再组件模板中定义 slot 节点 -->
+  <!-- 我是子节点内容
+  <text slot="slot-bottom">我需要显示到低部</text>
+</custom01> --> 
+
+
+<!-- label 文本显示的内容，position 控制文本显示的位置 -->
+<!-- <custom-checkbox label="我已阅读并同意用户协议和隐私协议" position="right">
+  我已阅读并同意用户协议和 隐私协议-111
+</custom-checkbox>
+<view class="line"></view>
+<custom-checkbox label="匿名提交" position="left">
+  匿名提交-222
+</custom-checkbox> -->
+
+<!-- <view class="custom parent">
+  <view>
+    <custom02 />
+    <view class="son test">我是父级页面中的结构</view>
+  </view>
+</view> -->
+
+<!-- <custom03 /> -->
+<!-- <custom04 /> -->
+<!-- <custom05 name="{{parentName}}" age="{{parentAge}}">
+</custom05> -->
+
+<!-- <view>{{ num }}</view> -->
+<!-- 需要在自定义组件标签上通过 bind 方法绑定自定义事件，同时绑定事件处理函数 -->
+<!-- <custom05 name="{{parentName}}" age="{{parentAge}}" bind:myevent="getData">
+</custom05>  -->
+
+<!-- <custom06/> -->
+<!-- <custom07/> -->
+
+<!-- 属性是在 externalClasses 里面定义的元素 -->
+<!-- 属性值必须是一个类名 -->
+<custom08 extend-class="my-class" />

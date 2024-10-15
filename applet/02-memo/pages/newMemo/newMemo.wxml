@@ -1,0 +1,12 @@
+<view class="container">
+ <!-- 标题输⼊框 -->
+ <view class="form-group">
+ <input class="input-title" placeholder="请输⼊标题" bindinput="handleTitleInput" value="{{title}}" />
+ </view>
+ <!-- 内容输⼊框 -->
+ <view class="form-group">
+ <textarea class="input-content" placeholder="请输⼊内容" bindinput="handleContentInput" value="{{content}}" />
+ </view>
+ <!-- 保存按钮 -->
+ <button class="save-button" bindtap="saveMemo">保存备忘录</button>
+</view>

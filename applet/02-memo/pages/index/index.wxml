@@ -1,0 +1,21 @@
+<view class="container">
+ <!-- 顶部标题区域 -->
+ <view class="header">
+ <!-- ⻚⾯标题，显示“我的备忘录” -->
+ <text class="title">我的备忘录</text>
+ </view>
+
+ <!-- 备忘录列表展示区域 -->
+ <view class="memo-list">
+ <!-- 使⽤ wx:for 循环遍历 memos 数据并展示每个备忘录 -->
+ <block wx:for="{{memos}}" wx:key="id">
+ <!-- 单个备忘录项 -->
+ <view class="memo-item">
+ <!-- 备忘录标题 -->
+ <view class="memo-title">{{item.title}}</view>
+ <!-- 备忘录内容的预览 -->
+ <view class="memo-content">{{item.content}}</view>
+ </view>
+ </block>
+ </view>
+</view>

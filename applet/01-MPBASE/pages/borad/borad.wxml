@@ -1,0 +1,7 @@
+<button class="action-btn" bindlongpress="showMenu">长按显示菜单</button>
+<view class="menu" style="display: {{isMenuVisible ? 'block' : 'none'}};">
+  <view class="text">操作1</view>
+	<view class="text">操作2</view>
+	<view class="text">操作3</view>
+ 
+</view>

@@ -1,0 +1,26 @@
+<view class="container">
+ <!-- ⻚⾯头部 -->
+ <view class="header">
+ <text class="title">每⽇星座运势</text>
+ </view>
+ <!-- 内容区 -->
+ <view class="content">
+ <!-- 选择星座按钮 -->
+ <van-button type="primary" bind:tap="showPopup">选择你的星座</van-button>
+ <!-- 弹出星座选择器 -->
+ <van-popup show="{{ showPopup }}" bind:close="onClose" position="bottom">
+ <van-picker
+ show-toolbar
+ columns="{{ zodiacSigns }}"
+ bind:confirm="onSelectSign"
+ />
+ </van-popup>
+ <!-- 选择星座后的结果展示 -->
+ <view wx:if="{{ selectedSign }}">
+ <text class="result">你选择的星座是: {{ selectedSign }}</text>
+ <text class="result">今天的运势: {{ horoscopeData }}</text>
+ <text class="result">幸运颜⾊: {{ luckyColor }}</text>
+ <text class="result">幸运数字: {{ luckyNumber }}</text>
+ </view>
+ </view>
+</view>

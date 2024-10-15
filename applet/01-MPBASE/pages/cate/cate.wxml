@@ -1,0 +1,58 @@
+<view>
+  <!-- <text>分类</text> -->
+<navigator url="/pages/myCart/myCart">
+<button type="default">跳到我的购物车</button>
+</navigator>
+
+<navigator url="/pages/practice/practice">
+<button type="default">翻转</button>
+</navigator>
+
+<navigator url="/pages/borad/borad">
+<button type="default">长按显示菜单</button>
+</navigator>
+
+
+<navigator url="/pages/delete/delete">
+<button type="default">左滑删除</button>
+</navigator>
+
+<navigator url="/pages/paint/paint">
+<button type="default">画板</button>
+</navigator>
+
+<navigator url="/pages/todolist/todolist">
+<button type="default">待办清单</button>
+</navigator>
+
+<navigator url="/pages/myComponent/myComponent">
+<button type="default">自定义组件</button>
+</navigator>
+
+<navigator url="/pages/myVant/myVant">
+<button type="default">vant 测试</button>
+</navigator>
+
+<navigator url="/pages/mpCapabilities/mpCapabilities">
+<button type="default">开放能力</button>
+</navigator>
+
+<navigator url="/pages/customNav/customNav">
+<button type="default">自定义导航栏</button>
+</navigator>
+
+
+
+  <!-- <view bindtap="parentHandler" data-parent-id="1" data-parentName="tom"> -->
+  <!-- 如果需要进行事件传参，需要再组件上通过 data- 的方式传递数据 -->
+  <!-- <button bindtap="btnHandler" data-id="1" data-name="tom">按钮</button> -->
+  <!-- <button data-id="1" data-name="tom" type="primary">按钮</button>
+</view> -->
+
+
+<!-- <view bindtap="parentHandler" mark:parentid="1" mark:parentname="tom"> -->
+  <!-- 如果需要使用 mark 进行事件传参，需要使用 mark:自定义属性的方式进行参数传递 -->
+  <!-- <button bindtap="btnHandler" mark:id="1" mark:name="tom">按钮</button> -->
+  <!-- <button mark:id="1" mark:name="tom" type="primary">按钮</button>
+</view> -->
+</view>

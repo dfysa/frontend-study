@@ -1,0 +1,8 @@
+<view class="list" catchtouchmove="handleTouchMove">
+  <block wx:for="{{items}}" wx:key="*this" wx:for-index="index" wx:for-item="item">
+    <view class="list-item" catchtouchstart="handleTouchStart" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" data-index="{{index}}" style="left: {{left}}px;">
+      <text>{{item.text}}</text>
+  
+    </view>
+  </block>
+</view>

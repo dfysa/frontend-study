@@ -1,0 +1,13 @@
+/* pages/paint/paint.wxss */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+	height: 100%;
+	background-color: red;
+}
+
+.myCanvas{
+  width: 800rpx; height: 400rpx;background-color: white;
+}

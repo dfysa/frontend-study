@@ -1,0 +1,17 @@
+<!--pages/order/detail/detail.wxml-->
+<view class="container">
+  <view wx:if="{{orderDetail}}">
+    <view>订单编号: {{orderId}}</view>
+    <view>商品名称: {{orderDetail.product}}</view>
+    <view>数量: {{orderDetail.amount}}</view>
+    <view>总价: ¥{{orderDetail.total}}</view>
+    <view>状态: {{orderDetail.status}}</view>
+    <view>收货地址: {{orderDetail.address}}</view>
+    <view wx:if="{{orderDetail.status === '未支付'}}">
+      <button bindtap="payOrder">支付订单</button>
+    </view>
+  </view>
+  <view wx:else>
+    <text>无法加载订单详情</text>
+  </view>
+</view>
