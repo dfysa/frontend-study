@@ -1,5 +1,5 @@
 {
-  "name": "qhub",
+  "name": "vue3-pinia",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,15 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tinymce/tinymce-vue": "^6.0.1",
-    "@wangeditor/editor": "^5.1.23",
-    "@wangeditor/editor-for-vue": "^5.1.12",
-    "axios": "^1.7.7",
-    "element-plus": "^2.8.5",
-    "qhub": "file:",
-    "tinymce": "^7.4.1",
+    "pinia": "^2.2.4",
+    "pinia-plugin-persistedstate": "^4.1.1",
     "vue": "^3.5.10",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "vue3-pinia": "file:"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
