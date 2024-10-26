@@ -1,0 +1,53 @@
+<view class="detail-container">
+  <view class="post-card" wx:if="{{question}}">
+    <view class="post-header">
+      <image src="{{question.avatar}}" class="avatar" />
+      <view class="user-info">
+        <text class="username">{{question.accountname}}</text>
+        <text class="timestamp">{{formattedTime}}</text>
+      </view>
+      <view wx:if="{{isOwner}}" class="more-options">
+        <button class="shenglue" bindtap="toggleOptions">...</button>
+        <view wx:if="{{showOptions}}" class="dropdown-menu">
+          <button class="edit" bindtap="editQuestion">编辑</button>
+          <button class="edit" bindtap="deleteQuestion">删除</button>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{!isEditing}}">
+      <view class="title">{{question.title}}</view>
+      <rich-text nodes="{{question.content}}" class="content"></rich-text>
+    </view>
+    <view wx:if="{{isEditing}}">
+      <textarea class="edit-content" value="{{editContent}}" bindinput="handleInput1"></textarea>
+      <button bindtap="submitEdit">提交</button>
+      <button bindtap="cancelEdit">取消</button>
+    </view>
+    <view class="post-footer">
+      <button data-target-id="{{question.id}}" data-type="2" bindtap="toggleLike">👍 {{question.questionLikeCount}} 赞</button>
+    </view>
+  </view>
+  
+  <view class="section-title">回复列表：</view>
+<view wx:if="{{mainAnswers.length === 0}}" class="empty-message">等你来回复</view>
+<block wx:else>
+  <block wx:for="{{mainAnswers}}" wx:key="answerId">
+    <view class="answer-item">
+      <image src="{{item.avatar}}" class="avatar" />
+      <view class="answer-content">
+        <text class="username">{{item.accountname}}</text>
+        <rich-text nodes="{{item.answerContent}}" class="content"></rich-text>
+        <text class="timestamp">{{formatTime(item.acreateTime)}}</text>
+        <button data-answer-id="{{item.answerId}}" bindtap="toggleEditor">回复</button>
+      </view>
+    </view>
+  </block>
+</block>
+  
+<button type="primary" bindtap="toggleEditor">{{showEditor ? '取消回答' : '发布回答'}}</button>
+<view wx:if="{{showEditor}}" class="editor-container">
+  <input class="input" placeholder="请输入待办事项" bindinput="handleInput" value="{{answerContent}}" />
+  <button type="primary" bindtap="submitAnswer">发布</button>
+</view>
+
+</view>

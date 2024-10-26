@@ -1,0 +1,80 @@
+<view class="user-profile-container">
+  <view class="header">
+    <text>个人信息</text>
+  </view>
+
+  <view wx:if="{{isLoggedIn}}" class="main-content">
+    <!-- 用户信息卡片 -->
+    <view class="user-info-card">
+      <!-- 头像 -->
+      <view class="avatar-section">
+        <image class="avatar" src="{{userInfo.avatar}}" bindtap="editAvatar" />
+        <image class="edit-icon" src="../../assets/userprofile/edit.png" bindtap="editAvatar" />
+      </view>
+      
+      <!-- 账号信息 -->
+      <view class="info-row">
+        <view class="label">账号名:</view>
+        <view class="value">
+          <text>{{userInfo.accountname}}</text>
+          <image class="edit-icon" src="../../assets/userprofile/edit.png" bindtap="editAccountname" />
+        </view>
+      </view>
+      
+      <view class="info-row">
+        <view class="label">用户名:</view>
+        <view class="value">{{userInfo.username}}</view>
+      </view>
+      
+      <view class="info-row">
+        <view class="label">邮箱:</view>
+        <view class="value">{{userInfo.email}}</view>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="action-buttons">
+      <button class="primary-button" bindtap="openPasswordDialog">修改密码</button>
+      <button class="danger-button" bindtap="logout">退出登录</button>
+    </view>
+  </view>
+
+  <view wx:else class="not-logged-in">
+    <text class="infooo">您还未登录，请先登录。</text>
+    <button type="primary" bindtap="goToLogin">去登录</button>
+  </view>
+  
+  <!-- 弹窗 -->
+  <!-- 上传头像弹窗 -->
+  <view wx:if="{{showAvatarDialog}}" class="modal">
+    <view class="modal-content">
+      <view class="modal-header">上传头像</view>
+      <view class="modal-body">
+        <image src="{{avatarUrl}}" mode="aspectFit" wx:if="{{avatarUrl}}" class="avatar-preview" />
+        <button class="primary-button" bindtap="submitAvatar" wx:if="{{avatarUrl}}">保存头像</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 验证当前密码弹窗 -->
+  <view wx:if="{{showPasswordDialog}}" class="modal">
+    <view class="modal-content">
+      <view class="modal-header">验证密码</view>
+      <view class="modal-body">
+        <input type="password" placeholder="请输入当前密码" model:value="{{password}}" />
+        <button class="primary-button" bindtap="validatePassword">确认</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 编辑昵称弹窗 -->
+  <view wx:if="{{showEditAccountnameDialog}}" class="modal">
+    <view class="modal-content">
+      <view class="modal-header">编辑昵称</view>
+      <view class="modal-body">
+        <input placeholder="新昵称" model:value="{{newAccountname}}" />
+        <button class="primary-button" bindtap="submitAccountname">确认修改</button>
+      </view>
+    </view>
+  </view>
+</view>

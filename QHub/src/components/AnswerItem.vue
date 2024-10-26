@@ -86,10 +86,29 @@ const submitNestedReply = (content: string) => {
   border-radius: 50%;
   margin-right: 10px;
   height: 50px;
+  width: 50px;
 }
 .answer-footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 5px;
+}
+.answer-header{
+  display: flex;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-weight: bold;
+  margin: 0;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #999;
 }
 </style>

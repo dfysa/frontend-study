@@ -1,0 +1,5 @@
+<view class="container">
+  <input class="title-input" placeholder="请输入标题" value="{{title}}" bindinput="onTitleInput" />
+  <textarea class="content-input" value="{{content}}"  placeholder="请输入内容" bindinput="onContentInput"></textarea>
+  <button class="submit-button" bindtap="handleSubmit">发布问题</button>
+</view>

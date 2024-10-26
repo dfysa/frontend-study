@@ -9,7 +9,7 @@ class TimeUtil {
     timestamp: number,
     format: string = "YYYY-MM-DD HH:mm:ss"
   ): string {
-    const date = new Date(timestamp * 1000); // 如果是毫秒级时间戳，则不需要乘以1000
+    const date = new Date(timestamp * 1000);
     const map: { [key: string]: string } = {
       YYYY: date.getFullYear().toString(),
       MM: String(date.getMonth() + 1).padStart(2, "0"),
@@ -27,22 +27,25 @@ class TimeUtil {
    * @returns 相对时间描述
    */
   static timeAgo(timestamp: number): string {
-    const now = Date.now();
-    const timeDiff = now - timestamp * 1000; // 如果是毫秒级时间戳，则不需要乘以1000
+    const now = Math.floor(Date.now() / 1000);
+    const timeDiff = now - timestamp;
 
-    const seconds = Math.floor(timeDiff / 1000);
+    const seconds = timeDiff;
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);
-    const months = Math.floor(days / 30);
-    const years = Math.floor(days / 365);
 
-    if (years > 0) return `${years} year${years > 1 ? "s" : ""} ago`;
-    if (months > 0) return `${months} month${months > 1 ? "s" : ""} ago`;
-    if (days > 0) return `${days} day${days > 1 ? "s" : ""} ago`;
-    if (hours > 0) return `${hours} hour${hours > 1 ? "s" : ""} ago`;
-    if (minutes > 0) return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
-    return "just now";
+    if (seconds < 60) {
+      return "刚刚发布";
+    } else if (minutes < 60) {
+      return `${minutes} 分钟前`;
+    } else if (hours < 24) {
+      return `${hours} 小时前`;
+    } else if (days === 1) {
+      return `昨天 ${TimeUtil.format(timestamp, "HH:mm")}`; // 显示昨天的时间
+    } else {
+      return TimeUtil.format(timestamp); // 返回具体日期
+    }
   }
 
   /**

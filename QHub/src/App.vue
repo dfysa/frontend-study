@@ -17,5 +17,6 @@ import Notifications from './views/Notifications.vue';
   display: flex;
   flex-direction: column;
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+ 
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <el-header class="header">
-    <el-row type="flex" justify="space-between" align="top">
-      <h1 class="logo">问答系统</h1>
+    <el-row type="flex" justify="space-between" align="middle">
+      <h1 class="logo" @click="gotoHome">问答系统</h1>
       <div class="user-info" v-if="userInfo">
         <!-- 消息图标 -->
         <img 
@@ -19,7 +19,7 @@
         <span>{{ userInfo.accountname }}</span>
       </div>
       <div v-else>
-        <el-button @click="goToLogin">请先登录</el-button>
+        <el-button class="login" @click="goToLogin">请先登录</el-button>
       </div>
     </el-row>
   </el-header>
@@ -27,11 +27,13 @@
 
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref,watch, onMounted } from 'vue';
 import { useRouter } from 'vue-router'; // 引入 useRouter
 import { extractUserId } from '../utils/JwtUtil';
 import axios from 'axios';
-
+ const props = defineProps({
+  userInfoUpdated: Boolean, // 接受来自父组件的传递
+});
 const router = useRouter(); // 创建 router 实例
 const userInfo = ref<any>(null);
 
@@ -47,11 +49,16 @@ const goToNotifications = () => {
 
 // 跳转到个人信息页
 const goToUserProfile = () => {
-  router.push('/user-profile'); // 跳转到个人信息页
+  router.push('/user'); // 跳转到个人信息页
 };
 
+const gotoHome = () => {
+  router.push('/'); // 跳转到个人信息页
+};
+
+
 // 获取用户信息
-const fetchUserInfo = async () => {
+  const fetchHeaderInfo = async () => {
   const token = localStorage.getItem('token');
   if (!token) {
     console.error('未检测到 Token，请先登录');
@@ -73,6 +80,8 @@ const fetchUserInfo = async () => {
 
     if (response.data.code === 200) {
       userInfo.value = response.data.data;
+      console.log("更新了")
+
     } else {
       console.error(response.data.msg);
     }
@@ -81,19 +90,37 @@ const fetchUserInfo = async () => {
   }
 };
 
-onMounted(fetchUserInfo);
+// 监听父组件传递的更新事件
+watch(() => props.userInfoUpdated, (newVal) => {
+  if (newVal) {
+   fetchHeaderInfo(); // 调用刷新用户信息的方法
+  }
+});
+ 
+onMounted(fetchHeaderInfo);
 
 </script>
 
+
+
 <style scoped>
 .header {
-  background-color: #409eff;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  /* 渐变背景 */
   color: white;
+  padding:0;
+
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
+   cursor: pointer;
+}
+
+.login {
+
+ 
 }
 
 .user-info {

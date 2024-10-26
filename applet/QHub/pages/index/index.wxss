@@ -1,0 +1,113 @@
+.post-container {
+  padding: 16px;
+}
+
+.post-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.time {
+  color: #888;
+  font-size: 12px;
+}
+
+.like-count {
+  color: #ff8800;
+  font-weight: bold;
+}
+
+.content-section {
+  margin-top: 8px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.content {
+  color: #666;
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007aff;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button[disabled] {
+  background-color: #ccc;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center; /* 中心对齐 */
+  align-items: center; /* 垂直居中 */
+  margin-bottom: 20px; /* 与其他内容的间距 */
+}
+
+.search-input {
+  flex: 1; /* 使输入框占据剩余空间 */
+  padding: 10px; /* 内边距 */
+  border: 1px solid #ccc; /* 边框样式 */
+  border-radius: 5px; /* 圆角 */
+  margin-right: 10px; /* 输入框与按钮之间的间距 */
+  
+}
+
+.search-button {
+  background-color: #007aff; /* 按钮背景色 */
+  color: white; /* 字体颜色 */
+  border: none; /* 无边框 */
+  border-radius: 5px; /* 圆角 */
+  padding: 10px 15px; /* 内边距 */
+  cursor: pointer; /* 鼠标悬停样式 */
+  max-width: 200rpx; /* 缩短最大宽度 */
+}
+
+.search-button:hover {
+  background-color: #005bb5; /* 悬停效果 */
+}

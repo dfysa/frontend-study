@@ -22,11 +22,12 @@
         @submitted="handleSubmit" 
       />
 
-      <h3 class="section-title">问题列表：</h3>
+      <!-- <h3 class="section-title">问题列表：</h3> -->
       <QuestionList 
         :questions="questions" 
         @detail="goToDetail" 
         @reply="prepareEditor" 
+        class="questionList"
       />
     </el-main>
   </el-container>
@@ -91,21 +92,21 @@ onMounted(fetchQuestions);
 }
 
 .header {
-  background-color: #409eff;
+background: linear-gradient(135deg, #3b82f6, #60a5fa);
   color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .toggle-editor-button {
   margin-bottom: 20px;
   width: 100%;
 }
-
 .el-main {
   padding: 20px;
-  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: auto;
+ 
 }
+
 </style>

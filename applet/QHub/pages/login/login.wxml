@@ -1,0 +1,14 @@
+<!-- login.wxml -->
+<view class="login-page">
+  <form bindsubmit="login">
+    <view class="form-item">
+      <label>用户名</label>
+      <input type="text" placeholder="请输入用户名" data-field="username" bindinput="handleInputChange" />
+    </view>
+    <view class="form-item">
+      <label>密码</label>
+      <input type="password" placeholder="请输入密码" data-field="password" bindinput="handleInputChange" />
+    </view>
+    <button formType="submit">登录</button>
+  </form>
+</view>

@@ -1,0 +1,44 @@
+<view class="post-container">
+  <!-- 搜索框 -->
+  <view class="search-container">
+  <input type="text" placeholder="搜索问题" value="{{title}}" bindinput="onSearchInput" />
+  <view class="button-container">
+    <button class="search-button" bindtap="handleSearch">搜索</button>
+  </view>
+</view>
+
+
+  <view wx:if="{{questions.length === 0}}" class="empty-message">
+    <text>目前还没有问题，期待你的提问！</text>
+  </view>
+
+  <block wx:else>
+    <block wx:for="{{questions}}" wx:key="index">
+      <view class="post-card" bindtap="emitDetail" data-id="{{item.id}}">
+        <!-- Header 区域：用户信息和点赞数量 -->
+        <view class="header">
+          <view class="user-info">
+            <image src="{{item.avatar}}" class="avatar"></image>
+            <view class="user-details">
+              <text class="username">{{item.accountname || '匿名用户'}}</text>
+              <text class="time">{{item.formattedTime}}</text>
+            </view>
+          </view>
+          <view class="like-count">👍 {{item.questionLikeCount}}</view>
+        </view>
+
+        <!-- Content 区域：问题标题和内容 -->
+        <view class="content-section">
+          <text class="title">{{item.title}}</text>
+          <rich-text nodes="{{item.content}}" class="content"></rich-text> <!-- 追加的content字段 -->
+        </view>
+      </view>
+    </block>
+
+    <!-- Pagination 区域：分页按钮 -->
+    <view class="pagination">
+      <button bindtap="prevPage" disabled="{{currentPage === 1}}">上一页</button>
+      <button bindtap="nextPage" disabled="{{currentPage * pageSize >= totalQuestions}}">下一页</button>
+    </view>
+  </block>
+</view>
