@@ -19,7 +19,7 @@
         </template>
       </el-table-column>
     </el-table>
-
+   <!-- 11 -->
     <el-dialog v-model="isDialogOpen" title="商品信息" :close-on-click-modal="false">
       <el-form :model="form" class="p-4">
         <el-form-item label="商品名称">
