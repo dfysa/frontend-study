@@ -8,6 +8,7 @@
       <el-table-column label="图片" width="120">
         <template #default="scope">
           <el-image :src="scope.row.cover" fit="cover" />
+          <!-- 222 -->
         </template>
       </el-table-column>
       <el-table-column prop="price" label="价格" width="200"></el-table-column>
